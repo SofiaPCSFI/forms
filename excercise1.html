@@ -9,21 +9,31 @@
   <body>
     <form>
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Complete Name (Required)</label>
-        <input type="name" class="form-control" id="exampleInputName1" aria-describedby="nameHelp">
+        <label for="name" class="form-label">Complete Name (Required)</label>
+        <input type="text" class="form-control" id="name" required>
+        <div class="invalid-feedback">
+          Please enter your name
+        </div>
       </div>
+
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Email address (Required, Valid email format)</label>
         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
       </div>
+
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Phone Number (Optional)</label>
-        <input class="form-control" type="number">
+        <label for="phone" class="form-label">Phone Number (Optional)</label>
+        <input type="tel" class="form-control" id="phone">
       </div>
+
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Message (Required, Minimum of 50 characters)</label>
-        <input type="message" class="form-control" id="exampleInputMessage1" aria-describedby="messageHelp">
-      </div>
+        <label for="message" class="form-label">Message (Required)</label>
+        <textarea class="form-control" id="message" 
+                  minlength="50" required></textarea>
+        <div class="invalid-feedback">
+          Message must be at least 50 characters
+        </div>
+
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
